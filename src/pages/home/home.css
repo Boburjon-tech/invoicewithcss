@@ -1,0 +1,183 @@
+.home_proms {
+     display: flex;
+     align-items: center;
+     margin-bottom: 6.5rem;
+}
+
+.nothing_page_container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+}
+
+.home_titles_wrapper{
+     display: flex;
+     flex-direction: column;
+     margin-right: auto;
+     gap: 0.8rem;
+}
+
+.home_title {
+     font-size: 3.2rem;
+     color:#0C0E16;
+}
+
+.home_pretitle {
+     font-size: 1.2rem;
+     color:#888EB0;
+}
+
+.add_btn {
+     padding: 0.8rem;
+     background-color: #9277FF;
+     border: none;
+     border-radius: 2.4rem;
+     display: flex;
+     align-items: center;
+     gap: 1.6rem;
+     color: #fff;
+     font-weight: bold;
+}
+
+.plus_icon {
+     padding: 1.1rem;
+     background-color: #fff;
+     border-radius: 50%; 
+}
+
+.invoices_wrapper {
+     display: flex;
+     flex-direction: column;
+     gap: 1.6rem;
+}
+
+.abb_user_div {
+     display: flex;
+     align-items: center;
+     padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+     justify-content: space-between;
+     border-radius: 0.8rem;
+     box-shadow:grey 0px 1px 3px -1px;
+}
+
+.abb_user_div:hover {
+     border: 1.5px solid #7C5DFA;
+}
+
+.client_date {
+     font-size: 1.2rem;
+     font-weight: 500;
+     color:#7E88C3;
+}
+
+.client_name {
+     color:#858BB2;
+     font-size: 1.2rem;
+     font-weight: 500;
+}
+
+.client_price {
+     font-size: 1.6rem;
+     font-weight: 700;
+     color:#0C0E16;
+}
+
+.client_trafic {
+     width: 104px;
+     height : 4rem;
+     border-radius: 0.6rem;
+     border:none;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.8rem;
+     font-size: 1.2rem;
+     text-transform: capitalize;
+     letter-spacing: 0.25px;
+
+     span {
+          width: 0.8rem;
+          height: 0.8rem;
+          border-radius: 50%;
+     }
+}
+
+.paid {
+     background-color: rgba(51, 214, 159, 0.051);
+     color:#0b9f6e;
+     font-weight: bold;
+     text-transform: capitalize;
+}
+
+.paidor {
+
+     background-color: #0b9f6e;
+}
+
+.pending {
+     background-color: rgba(255, 143, 0, 0.051);
+     color:  #FF8F00;
+     font-weight: bold;
+}
+
+.pendingor {
+     background-color: #FF8F00;
+}
+
+.draft {
+     background-color: rgba(55, 59, 83, 0.051);
+     color: #373b57 ;
+     font-weight: bold;
+}
+
+.draftor {
+     background-color: #373B53;
+}
+
+.abb_user_div_mob {
+     display: flex;
+     flex-direction: column;
+     gap: 2.4rem;
+      border-radius: 0.8rem;
+     box-shadow:grey 0px 1px 3px -1px;
+     padding: 2.4rem;
+}
+
+.new_invoice_modal {
+     position: fixed;
+     left: 103px;
+     top: 0;
+     background-color: #fff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.new_invoice_modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 62rem;
+  background-color: #fff;
+  z-index: 11;
+  overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width:768px){
+     .new_invoice_modal {
+          left: 0;
+          top: 8rem;
+     }
+}
+
+
