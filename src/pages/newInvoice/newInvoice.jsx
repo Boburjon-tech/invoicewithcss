@@ -2,7 +2,7 @@ import { useState } from "react";
 import { addInvoice } from "../../requests/index";
 import { useNavigate } from "react-router-dom";
 import "./newInvoice.css";
-import trashNonActive from "../../images/trashNonActive.png";
+
 
 function NewInvoice({ onClose }) {
   const navigate = useNavigate();
@@ -269,7 +269,7 @@ function NewInvoice({ onClose }) {
                 className="remove_item_btn"
                 onClick={() => removeItem(index)}
               >
-                <img src={trashNonActive} alt="Remove" />
+                <img src="../../images/trashNonActive.png" alt="Remove" />
               </button>
             </div>
           ))}
