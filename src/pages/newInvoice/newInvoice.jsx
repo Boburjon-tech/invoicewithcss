@@ -3,7 +3,6 @@ import { addInvoice } from "../../requests/index";
 import { useNavigate } from "react-router-dom";
 import "./newInvoice.css";
 
-
 function NewInvoice({ onClose }) {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -61,9 +60,12 @@ function NewInvoice({ onClose }) {
         ),
       };
       await addInvoice(draftInvoice);
+
+      alert(" Vazifa bajarildi. Refresh qiling yoki avtomatik sahifaga qaytdingiz.");
+      window.location.reload();
       navigate("/");
     } catch (err) {
-      alert("Xatolik: " + err.message);
+      alert(" Xatolik: " + err.message);
     }
   };
 
@@ -78,9 +80,12 @@ function NewInvoice({ onClose }) {
         ),
       };
       await addInvoice(newInvoice);
+
+      alert(" Invoice muvaffaqiyatli yuborildi. Sahifa avtomatik yangilanmoqda.");
+      window.location.reload();
       navigate("/");
     } catch (err) {
-      alert("Xatolik: " + err.message);
+      alert(" Xatolik: " + err.message);
     }
   };
 
@@ -103,7 +108,6 @@ function NewInvoice({ onClose }) {
     <div className="create_page_main_div">
       <h2 className="create_page_title">New Invoice</h2>
       <form className="create_page_form" onSubmit={handleSubmit}>
-
         <div className="bill_from_main_div">
           <p className="bills_title">Bill From</p>
           <label>
@@ -206,7 +210,6 @@ function NewInvoice({ onClose }) {
                 onChange={(e) => handleChange(e, null, "paymentDue")}
               />
             </label>
-
             <label className="payment_terms">
               Payment Terms
               <select
@@ -233,7 +236,6 @@ function NewInvoice({ onClose }) {
           </label>
         </div>
 
-        {/* Item List */}
         <div className="item_list_main_div">
           <h3 className="item_list_title">Item List</h3>
           <div className="item_list_categs">
@@ -278,9 +280,8 @@ function NewInvoice({ onClose }) {
           </button>
         </div>
 
-  
         <div className="footer_buttons">
-          <button  type="button" onClick={onClose} className="discard_btn">
+          <button type="button" onClick={onClose} className="discard_btn">
             Discard
           </button>
           <button type="button" onClick={handleDraftSave} className="draft_btn">

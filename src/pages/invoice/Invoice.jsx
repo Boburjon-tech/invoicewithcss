@@ -17,10 +17,23 @@ import { useNavigate } from "react-router-dom";
     const [status, setStatus] = useState("");
     
     
-    const markPaid = (e) => {
-      e.preventDefault();
-      setStatus("paid");
+   const markPaid = async (e) => {
+  e.preventDefault();
+  try {
+    const updatedInvoice = {
+      ...invoice,
+      status: "paid"
     };
+
+    await updateById(id, updatedInvoice);
+    alert("Invoice muvaffaqiyatli to'langan deb belgilandi. Sahifa yangilanmoqda...");
+    window.location.reload(); 
+
+  } catch (error) {
+    alert("Status yangilanmadi: " + error.message);
+  }
+};
+
     
     const navigate = useNavigate()
     
@@ -38,6 +51,7 @@ import { useNavigate } from "react-router-dom";
       async function handleDelete() {
       try {
         await deleteById(id);
+        window.location.reload();
         navigate("/");
       } catch (error) {
         alert("Failed to delete invoice: " + error.message);
