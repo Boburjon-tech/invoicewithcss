@@ -97,3 +97,49 @@ body {
     padding-left: 2.4rem;
   }
 }
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .item_wrapper {
+  color:#121212;
+}
+
+[data-theme="dark"] .client_namee {
+  color:#fff;
+}
+
+[data-theme="dark"] .userid {
+  color:#fff;
+}
+
+[data-theme="dark"] .client_mail {
+  color:#fff;
+}
+
+[data-theme="dark"] .the_this_date {
+  color:#fff;
+}
+
+[data-theme="dark"] .home_title {
+  color:#fff;
+}
+
+[data-theme="dark"] .select-box {
+  button {
+
+    color:#fff;
+  }
+}
