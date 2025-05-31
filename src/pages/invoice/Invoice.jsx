@@ -26,7 +26,7 @@ import { useNavigate } from "react-router-dom";
     };
 
     await updateById(id, updatedInvoice);
-    alert("Invoice muvaffaqiyatli to'langan deb belgilandi. Sahifa yangilanmoqda...");
+    alert("Invoice muvaffaqiyatli to'langan deb belgilandi. Sahifa yangilanmoqda.");
     window.location.reload(); 
 
   } catch (error) {
@@ -75,7 +75,7 @@ import { useNavigate } from "react-router-dom";
             <div className="emd_wrappers">
               <button className="edit_btn">Edit</button>
               <button onClick={handleDelete} className="delete_btn">Delete</button>
-              <button className="change_status_btn" onClick={markPaid}>Mark as Paid</button>
+              {invoice?.status!=="paid?<button className="change_status_btn" onClick={markPaid}>Mark as Paid</button>:""}
             </div>
           </div>
         </div>
