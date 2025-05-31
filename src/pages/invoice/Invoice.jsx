@@ -75,7 +75,7 @@ import { useNavigate } from "react-router-dom";
             <div className="emd_wrappers">
               <button className="edit_btn">Edit</button>
               <button onClick={handleDelete} className="delete_btn">Delete</button>
-              {invoice?.status!=="paid?<button className="change_status_btn" onClick={markPaid}>Mark as Paid</button>:""}
+              <button className="change_status_btn" onClick={markPaid}>Mark as Paid</button>
             </div>
           </div>
         </div>
