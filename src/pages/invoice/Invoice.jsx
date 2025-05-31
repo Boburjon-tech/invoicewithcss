@@ -26,7 +26,7 @@ import { useNavigate } from "react-router-dom";
     };
 
     await updateById(id, updatedInvoice);
-    alert("Invoice muvaffaqiyatli to'langan deb belgilandi. Sahifa yangilanmoqda.");
+    alert("Invoice muvaffaqiyatli to'langan deb belgilandi. Sahifa yangilanmoqda...");
     window.location.reload(); 
 
   } catch (error) {
